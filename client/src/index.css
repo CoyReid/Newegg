@@ -11,3 +11,44 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* temporary css until material ui addition/conversion */
+.authForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+.authForm form {
+  margin: 4em auto;
+  width: 50%;
+  background: rgba(255,255,255,0.92);
+  text-align:center;
+}
+.authForm button {
+  background: #00f;
+  color: white;
+  padding: 1rem 4rem;
+}
+
+.App {
+  background-color: rgba(255,255,255, 0.95);
+  width: 80%;
+  margin: 2em auto;
+  padding: 2em;
+  min-height: 100vh;
+}
+
+form input, form textarea {
+  width: 16rem;
+  padding: 0.5rem;
+  max-width: 85%;
+}
+
+form label {
+  display: inline-block;
+  width: 6rem;
+  vertical-align: top;
+  padding: 0.5rem;
+}
