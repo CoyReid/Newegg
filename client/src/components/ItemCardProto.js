@@ -4,7 +4,6 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import ButtonBase from '@mui/material/ButtonBase';
 import { Link } from 'react-router-dom';
-import { Button } from "@material-ui/core";
 
 const Img = styled('img')({
   margin: 'auto',
@@ -13,11 +12,7 @@ const Img = styled('img')({
   maxHeight: '100%',
 });
 
-export default function CartItemCard({item, handleDelete}) {
-  function handleClick() {
-    handleDelete(item.id);
-  }
-  
+export default function ItemCardProto({item}) {
   return (
     <Grid item xs={4}>
     <Paper sx={{ p: 2, margin: 'auto', maxWidth: 500, flexGrow: 1 }}>
@@ -58,9 +53,6 @@ export default function CartItemCard({item, handleDelete}) {
               {item.rating}/5
             </Typography>
           </Grid>
-          <Button variant="outlined" onClick={handleClick}>
-            Remove From Cart
-          </Button>
         </Grid>
       </Grid>
     </Paper>

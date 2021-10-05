@@ -88,8 +88,6 @@ const ItemPage = () => {
                 <br></br>
                 Rating: {item.rating}/5
                 <br></br>
-                In Stock: {item.stock ? "Yes" : "No"}
-                <br></br>
                 Brand: {item.brand}
                 <br></br>
                 Specs: {item.specs}

@@ -1,6 +1,6 @@
-import ItemCard from "./ItemCard";
 import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
+import ItemCardProto from "./ItemCardProto";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 const ItemContainter = ({ items }) => {
   const classes = useStyles();
 
-  const itemsToShow = items.map((item) => <ItemCard item={item} key={item.id} />);
+  const itemsToShow = items.map((item) => <ItemCardProto item={item} key={item.id} />);
 
   return (
     <Grid

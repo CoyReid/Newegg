@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 2021_10_04_193218) do
   create_table "items", force: :cascade do |t|
     t.string "name"
     t.string "brand"
-    t.boolean "stock"
     t.float "price"
     t.integer "rating"
     t.string "category"

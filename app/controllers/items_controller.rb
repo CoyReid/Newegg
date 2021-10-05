@@ -21,7 +21,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.permit(:stock, :rating)
+    params.permit(:rating)
   end
 
   def find_item
