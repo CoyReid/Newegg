@@ -1,7 +1,7 @@
 import NavBar from "./components/NavBar";
 import ItemPage from "./components/ItemPage";
 import MainPage from "./components/MainPage";
-import Settings from "./components/Settings";
+import Cart from "./components/Cart";
 import { Switch, Route, useHistory} from "react-router-dom";
 
 function AuthenticatedApp({ currentUser, setCurrentUser}) {
@@ -29,8 +29,8 @@ function AuthenticatedApp({ currentUser, setCurrentUser}) {
         <Route exact path="/mainpage">
           <MainPage />
         </Route>
-        <Route exact path="/settings">
-          <Settings />
+        <Route exact path="/cart">
+          <Cart />
         </Route>
       </Switch>
     </div>

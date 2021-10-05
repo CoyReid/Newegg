@@ -13,7 +13,7 @@ import MenuItem from '@mui/material/MenuItem';
 
 const useStyles = makeStyles(() => ({
   bar: {
-    backgroundColor: "#1A2B23",
+    backgroundColor: "#826848",
   }
 }));
 
@@ -54,7 +54,7 @@ function NavBar({ handleLogout }) {
             onClose={()=> setAnchorel(null)}
           >
             <MenuItem onClick={()=> handleMenuClick('/mainpage')}>Home</MenuItem>
-            <MenuItem onClick={()=> handleMenuClick('/settings')}>Settings</MenuItem>
+            <MenuItem onClick={()=> handleMenuClick('/cart')}>Cart</MenuItem>
           </Menu>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Oldegg

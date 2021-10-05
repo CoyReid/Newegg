@@ -7,6 +7,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
+import { Button } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
   media: {
     paddingTop: "100%",
-    paddingBottom: "2%"
+    paddingBottom: "2%",
   },
   control: {
     padding: theme.spacing(2),
@@ -31,17 +32,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ItemCard = ({ item }) => {
+const CartItemCard = ({ item, handleDelete }) => {
   const classes = useStyles();
+
+  function handleClick() {
+    handleDelete(item.id);
+  }
 
   return (
     <Grid item>
       <Card className={classes.root}>
-        <CardHeader
-          id="text"
-          title={item.name}
-          subheader={item.category}
-        />
+        <CardHeader id="text" title={item.name} subheader={item.category} />
         <Link to={`/item/${item.id}`}>
           <CardMedia
             id="cardpic"
@@ -67,9 +68,12 @@ const ItemCard = ({ item }) => {
             Specs: {item.specs}
           </Typography>
         </CardContent>
+        <Button variant="outlined" onClick={handleClick}>
+            Remove From Cart
+          </Button>
       </Card>
     </Grid>
   );
 };
 
-export default ItemCard;
+export default CartItemCard;

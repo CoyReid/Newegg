@@ -4,10 +4,9 @@ class UserItemsController < ApplicationController
 
   before_action :confirm_authentication
   before_action :find_user_item, only: [:show, :update, :destroy]
-  before_action :authorize_user, only: [:update, :destroy]
 
   def index
-    render json: UserItem.all
+    render json: current_user.user_items
   end
 
   def show

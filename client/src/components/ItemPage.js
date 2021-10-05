@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Card, CardMedia, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import { Button } from "@material-ui/core";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -24,10 +25,6 @@ const useStyles = makeStyles(() => ({
     margin: "200px auto 0 auto",
     display: "flex",
     justifyContent: "center",
-  },
-  form: {
-    display: "flex",
-    flexDirection: "column",
   },
   itemText: {
     margin: "auto",
@@ -50,6 +47,26 @@ const ItemPage = () => {
       .then(setItem);
   }, [idNumber]);
 
+  function handleClick() {
+    fetch("/user_items", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+      body: JSON.stringify({
+        item_id: item.id,
+      }),
+    }).then((res) => {
+      if (res.ok) {
+        return res.json();
+      } else {
+        return res.json().then((errors) => Promise.reject(errors));
+      }
+    });
+    alert("Item Added to Cart!")
+  }
+
   if (Object.keys(item).length !== 0) {
     return (
       <div className="item-page">
@@ -67,7 +84,7 @@ const ItemPage = () => {
             <Typography variant="h4" className={classes.itemText}>
               {item.name}
               <Typography>
-                Price: {item.price}
+                Price: ${item.price}
                 <br></br>
                 Rating: {item.rating}/5
                 <br></br>
@@ -80,6 +97,9 @@ const ItemPage = () => {
             </Typography>
           </div>
         </div>
+        <Button variant="outlined" onClick={handleClick}>
+          Add to Cart
+        </Button>
       </div>
     );
   } else {
