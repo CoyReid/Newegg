@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #0F2634;
 }
 
 code {
@@ -33,7 +34,7 @@ code {
 }
 
 .App {
-  background-color: rgba(255,255,255, 0.95);
+  background-color: #304553;
   width: 80%;
   margin: 2em auto;
   padding: 2em;
@@ -51,4 +52,19 @@ form label {
   width: 6rem;
   vertical-align: top;
   padding: 0.5rem;
+}
+
+
+
+
+#bar {
+  background-color: #826848 !important;
+}
+
+.main {
+  margin-top: 100px !important;
+}
+
+#text {
+  color: whitesmoke !important;
 }

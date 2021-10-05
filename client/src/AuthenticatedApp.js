@@ -4,7 +4,7 @@ import MainPage from "./components/MainPage";
 import Settings from "./components/Settings";
 import { Switch, Route, useHistory} from "react-router-dom";
 
-function AuthenticatedApp({ currentUser, setCurrentUser }) {
+function AuthenticatedApp({ currentUser, setCurrentUser}) {
   const history = useHistory();
 
   const handleLogout = () => {
@@ -21,11 +21,13 @@ function AuthenticatedApp({ currentUser, setCurrentUser }) {
 
   return (
     <div className="App">
-      <NavBar handleLogout={handleLogout} currentUser={currentUser} />
-      <MainPage />
+      <NavBar handleLogout={handleLogout}/>
       <Switch>
         <Route path="/item/:id">
           <ItemPage />
+        </Route>
+        <Route exact path="/mainpage">
+          <MainPage />
         </Route>
         <Route exact path="/settings">
           <Settings />
