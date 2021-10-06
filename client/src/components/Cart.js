@@ -14,7 +14,7 @@ function Cart() {
   }, []);
 
   function handleDelete(id) {
-    let userItemId = items.find(item => item.item.id === id).id
+    let userItemId = items.find((item) => item.item.id === id).id;
     fetch(`/user_items/${userItemId}`, {
       method: "DELETE",
       credentials: "include",
@@ -27,12 +27,16 @@ function Cart() {
   }
 
   return (
-    <div className="main">
-      <CartItemContainer items={items} handleDelete={handleDelete} />
-      <Button variant="outlined">
-            Checkout
-          </Button>
-    </div>
+    <>
+      <div className="main">
+        <CartItemContainer items={items} handleDelete={handleDelete} />
+      </div>
+      <div className="cart">
+        <Button variant="outlined" id="remove-btn">
+          Checkout
+        </Button>
+      </div>
+    </>
   );
 }
 

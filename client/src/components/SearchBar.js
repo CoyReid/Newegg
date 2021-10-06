@@ -5,11 +5,10 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(() => ({
   root: {
-    backgroundColor: "#826848",
-    marginLeft: "20px",
+    backgroundColor: "#D2B599",
     borderRadius: "3px",
-    color: "white"
-
+    color: "black",
+    marginRight: "12px"
   },
   dropDown:{
     padding: "0px 5px 0px 5px"
@@ -41,7 +40,6 @@ const SearchBar = ({search, onSearchChange, filter, onFilterChange, sort, onSort
         id="outlined-secondary"
         label="Search..."
         variant="filled"
-        color="primary"
         value={search}
         onChange={handleSearchChange}
       />

@@ -7,15 +7,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     display: "flex",
     flexDirection: "row",
-  },
-  paper: {
-    height: 250,
-    width: 250,
-    padding: theme.spacing(1),
-  },
-  control: {
-    padding: theme.spacing(1),
-  },
+  }
 }));
 
 const CartItemContainter = ({ items, handleDelete }) => {

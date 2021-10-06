@@ -28,7 +28,7 @@ code {
   text-align:center;
 }
 .authForm button {
-  background: #00f;
+  background: #D2B599;
   color: white;
   padding: 1rem 4rem;
 }
@@ -39,6 +39,7 @@ code {
   margin: 2em auto;
   padding: 2em;
   min-height: 100vh;
+  border-radius: 2px;
 }
 
 form input, form textarea {
@@ -58,13 +59,36 @@ form label {
 
 
 #bar {
-  background-color: #826848 !important;
+  background-color: #D2B599 !important;
+  color: black;
 }
 
 .main {
-  margin-top: 100px !important;
+  margin-top: 30px !important;
+  justify-content: center !important;
 }
 
 #text {
   color: whitesmoke !important;
 }
+
+.search, .cart {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px !important;
+}
+
+#add-btn:hover {
+  background-color: whitesmoke !important;
+}
+
+#remove-btn {
+  background-color: #D2B599 !important;
+  margin-top: 15px !important;
+}
+
+#remove-btn:hover {
+  background-color: whitesmoke !important;
+}
+
+

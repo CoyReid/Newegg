@@ -5,6 +5,7 @@ import { Card, CardMedia, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { Button } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -14,9 +15,10 @@ const useStyles = makeStyles(() => ({
     maxHeight: 470,
   },
   media: {
-    height: 470,
-    maxWidth: 500,
-    minWidth: 350,
+    margin: 'auto',
+  display: 'block',
+  maxWidth: '100%',
+  maxHeight: '100%',
   },
   text: {
     color: "white",
@@ -31,6 +33,18 @@ const useStyles = makeStyles(() => ({
     color: "white",
     marginTop: "60px",
   },
+  woot: {
+    flexGrow: 1,
+    display: "flex",
+    flexDirection: "row",
+  },
+  info: {
+    marginTop: "50px",
+  },
+  btn: {
+    marginTop: "20px",
+    backgroundColor: "#D2B599",
+  }
 }));
 
 const ItemPage = () => {
@@ -64,41 +78,43 @@ const ItemPage = () => {
         return res.json().then((errors) => Promise.reject(errors));
       }
     });
-    alert("Item Added to Cart!")
+    alert("Item Added to Cart!");
   }
 
   if (Object.keys(item).length !== 0) {
     return (
-      <div className="item-page">
-        <div className="item-details">
-          <Card className={classes.root}>
-            <CardMedia
-              component="img"
-              className={classes.media}
-              image={item.image}
-              title={item.image}
-              alt="a computer part"
-            ></CardMedia>
-          </Card>
-          <div className="item-title">
+      <>
+        <Grid container className={classes.woot}>
+          <Grid item xs={6}>
+            <Card className={classes.root}>
+              <CardMedia
+                component="img"
+                className={classes.media}
+                image={item.image}
+                title={item.image}
+                alt="a computer part"
+              ></CardMedia>
+            </Card>
+          </Grid>
+          <Grid item xs={6} className={classes.info}>
             <Typography variant="h4" className={classes.itemText}>
               {item.name}
               <Typography>
-                Price: ${item.price}
+                <em>Price:</em> ${item.price}
                 <br></br>
-                Rating: {item.rating}/5
+                <em>Rating:</em> {item.rating}/5
                 <br></br>
-                Brand: {item.brand}
+                <em>Brand:</em> {item.brand}
                 <br></br>
-                Specs: {item.specs}
+                <em>Specs:</em> {item.specs}
               </Typography>
             </Typography>
-          </div>
-        </div>
-        <Button variant="outlined" onClick={handleClick}>
-          Add to Cart
-        </Button>
-      </div>
+            <Button variant="outlined" onClick={handleClick} className={classes.btn} id="add-btn">
+              Add to Cart
+            </Button>
+          </Grid>
+        </Grid>
+      </>
     );
   } else {
     return (
