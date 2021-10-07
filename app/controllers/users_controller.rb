@@ -23,14 +23,14 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user.update!(user_params)
+    @user.update!(user_update_params)
     render json: @user
   end
 
   private
 
   def user_update_params
-    params.permit(:username, :password, :email, :address)
+    params.permit(:username, :email, :address)
   end
 
   def user_params

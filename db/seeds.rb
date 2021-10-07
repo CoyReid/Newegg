@@ -1,5 +1,5 @@
-u1 = User.create(username: 'user1', password: 'password', email: 'user1@gmail.com', address: '567 Fake Address St', admin: true)
-u2 = User.create(username: 'user2', password: 'password', email: 'user2@aol.com', address: '1234 Fake Address St', admin: true)
+u1 = User.create(username: 'user1', password: 'useronepass', email: 'user1@gmail.com', address: '567 Fake Address St', admin: true)
+u2 = User.create(username: 'user2', password: 'usertwopass', email: 'user2@aol.com', address: '1234 Fake Address St', admin: true)
 
 # cases
 case_item_attributes = [

@@ -82,13 +82,24 @@ form label {
   background-color: whitesmoke !important;
 }
 
-#remove-btn {
+#save:hover {
+  background-color: whitesmoke !important;
+}
+
+#remove-btn, #save.btn {
   background-color: #D2B599 !important;
   margin-top: 15px !important;
+}
+
+#log:hover {
+  background-color: whitesmoke !important;
 }
 
 #remove-btn:hover {
   background-color: whitesmoke !important;
 }
 
-
+#settings {
+  display: flex !important;
+  flex-direction: column !important;
+}

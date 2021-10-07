@@ -32,7 +32,7 @@ function Login({ setCurrentUser }) {
     <div className="authForm">
       <Redirect to="/" />
       <form onSubmit={handleSubmit}>
-        <h1>Log In</h1>
+        <h1>Please Log In To Start Shopping!</h1>
         <p>
           <label htmlFor="username">Username</label>
           <input

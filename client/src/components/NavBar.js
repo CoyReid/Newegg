@@ -55,11 +55,12 @@ function NavBar({ handleLogout }) {
           >
             <MenuItem onClick={()=> handleMenuClick('/mainpage')}>Home</MenuItem>
             <MenuItem onClick={()=> handleMenuClick('/cart')}>Cart</MenuItem>
+            <MenuItem onClick={()=> handleMenuClick('/settings')}>Settings</MenuItem>
           </Menu>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Oldegg
           </Typography>
-          <Button color="inherit" onClick={handleLogout}>Logout</Button>
+          <Button color="inherit" onClick={handleLogout} id="log">Logout</Button>
         </Toolbar>
       </AppBar>
     </Box>
