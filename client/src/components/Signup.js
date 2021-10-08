@@ -23,11 +23,10 @@ function Signup({ setCurrentUser }) {
       if (res.ok) {
         res.json().then((user) => {
           setCurrentUser(user);
-          history.push('/mainpage')
+          history.push("/mainpage");
         });
       } else {
-        setCurrentUser({username: 'user1'})
-        history.push('/mainpage')
+        history.push("/mainpage");
         res.json().then((errors) => {
           console.error(errors);
         });

@@ -54,10 +54,11 @@ export default function CartItemCard({ item, handleDelete }) {
               <Typography variant="subtitle2" component="div">
                 {item.rating}/5
               </Typography>
-            </Grid>
-            <Button variant="outlined" onClick={handleClick}>
-              Remove From Cart
+              <Button variant="outlined" onClick={handleClick}>
+              Remove
             </Button>
+            </Grid>
+            
           </Grid>
         </Grid>
       </Paper>

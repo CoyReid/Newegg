@@ -18,7 +18,7 @@ function Login({ setCurrentUser }) {
       if (res.ok) {
         res.json().then((user) => {
           setCurrentUser(user);
-          history.push('/mainpage')
+          history.push("/mainpage");
         });
       } else {
         res.json().then((errors) => {

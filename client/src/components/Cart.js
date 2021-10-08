@@ -27,7 +27,7 @@ function Cart() {
   }
 
   return (
-    <>
+    <div>
       <div className="main">
         <CartItemContainer items={items} handleDelete={handleDelete} />
       </div>
@@ -36,7 +36,7 @@ function Cart() {
           Checkout
         </Button>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -2,10 +2,10 @@ import NavBar from "./components/NavBar";
 import ItemPage from "./components/ItemPage";
 import MainPage from "./components/MainPage";
 import Cart from "./components/Cart";
-import { Switch, Route, useHistory} from "react-router-dom";
-import Settings from './components/Settings'
+import { Switch, Route, useHistory } from "react-router-dom";
+import Settings from "./components/Settings";
 
-function AuthenticatedApp({ currentUser, setCurrentUser}) {
+function AuthenticatedApp({ currentUser, setCurrentUser }) {
   const history = useHistory();
 
   const handleLogout = () => {
@@ -15,14 +15,14 @@ function AuthenticatedApp({ currentUser, setCurrentUser}) {
     }).then((res) => {
       if (res.ok) {
         setCurrentUser(null);
-        history.push('/')
+        history.push("/");
       }
     });
   };
 
   return (
     <div className="App">
-      <NavBar handleLogout={handleLogout}/>
+      <NavBar handleLogout={handleLogout} />
       <Switch>
         <Route path="/item/:id">
           <ItemPage />
@@ -34,7 +34,7 @@ function AuthenticatedApp({ currentUser, setCurrentUser}) {
           <Cart />
         </Route>
         <Route exact path="/settings">
-          <Settings user={currentUser} setCurrentUser={setCurrentUser}/>
+          <Settings user={currentUser} setCurrentUser={setCurrentUser} />
         </Route>
       </Switch>
     </div>
