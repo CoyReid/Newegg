@@ -32,7 +32,8 @@ function Login({ setCurrentUser }) {
     <div className="authForm">
       <Redirect to="/" />
       <form onSubmit={handleSubmit}>
-        <h1>Please Log In To Start Shopping!</h1>
+        <h1>Welcome to Oldegg</h1>
+        <h2>Please Log In To Start Shopping!</h2>
         <p>
           <label htmlFor="username">Username</label>
           <input
@@ -54,7 +55,7 @@ function Login({ setCurrentUser }) {
         <p>
           <button type="submit">Log In</button>
         </p>
-        <p>-- or --</p>
+        <p>OR</p>
         <p>
           <Link to="/signup">Sign Up</Link>
         </p>

@@ -103,3 +103,7 @@ form label {
   display: flex !important;
   flex-direction: column !important;
 }
+
+#remove {
+  background-color: rgb(129, 41, 41) !important;
+}

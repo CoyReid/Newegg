@@ -54,7 +54,7 @@ export default function CartItemCard({ item, handleDelete }) {
               <Typography variant="subtitle2" component="div">
                 {item.rating}/5
               </Typography>
-              <Button variant="outlined" onClick={handleClick}>
+              <Button variant="outlined" onClick={handleClick} id="remove">
               Remove
             </Button>
             </Grid>

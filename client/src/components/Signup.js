@@ -37,9 +37,9 @@ function Signup({ setCurrentUser }) {
   return (
     <div className="authForm">
       <form onSubmit={handleSubmit}>
-        <h1>Sign Up</h1>
+        <h1>Please Sign Up Here:</h1>
         <p>
-          <label htmlFor="username">Username</label>
+          <label htmlFor="username">Username:</label>
           <input
             type="text"
             name="username"
@@ -48,7 +48,7 @@ function Signup({ setCurrentUser }) {
           />
         </p>
         <p>
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">Password:</label>
           <input
             type="password"
             name=""
@@ -57,7 +57,7 @@ function Signup({ setCurrentUser }) {
           />
         </p>
         <p>
-          <label htmlFor="password_confirmation">Password Confirmation</label>
+          <label htmlFor="password_confirmation">Password Confirmation:</label>
           <input
             type="password"
             name="password_confirmation"
@@ -68,9 +68,8 @@ function Signup({ setCurrentUser }) {
         <p>
           <button type="submit">Sign Up</button>
         </p>
-        <p>-- or --</p>
         <p>
-          <Link to="/">Log In</Link>
+          <Link to="/">I already have an account</Link>
         </p>
       </form>
     </div>
