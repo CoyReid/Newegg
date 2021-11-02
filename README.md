@@ -7,7 +7,7 @@ It is designed to be a clone of the popular shopping website Newegg, featuring P
 
 Demo:
 
-*insert link*
+https://watch.screencastify.com/v/1EZZe5rGrRBvjpL5x43N
 
 Oldegg is meant to be a personal project and not to be deployed for official use. 
 
